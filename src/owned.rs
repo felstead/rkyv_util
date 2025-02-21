@@ -107,6 +107,13 @@ impl<T, C> OwnedArchive<T, C> {
             )
         }
     }
+
+    /// Docs
+    /// 
+    pub fn as_bytes(&self) -> &[u8] 
+    where C : StableBytes {
+        self.container.bytes()
+    }
 }
 
 impl<C: StableBytes, T: Archive> Deref for OwnedArchive<T, C> {
