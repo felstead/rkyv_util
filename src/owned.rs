@@ -108,8 +108,7 @@ impl<T, C> OwnedArchive<T, C> {
         }
     }
 
-    /// Docs
-    /// 
+    /// Return the container's inner bytes as a slice
     pub fn as_bytes(&self) -> &[u8] 
     where C : StableBytes {
         self.container.bytes()
